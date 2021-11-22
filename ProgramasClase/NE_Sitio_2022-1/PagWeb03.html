@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<!-- ****************************    Formularios ****************************  --> 
+
+<head>
+<title>Formularios</title>
+<script type=text/javascript src = showObjProperties.js> </script>
+<script>
+function validar ()
+   { n_cta = document.getElementById("numCuenta").value;
+     nombre = document.getElementById("nombreAlum").value;
+	 hombre = document.getElementById("masc").checked;
+	 mujer  = document.getElementById("fem").checked;
+	 alert("nCta=" + n_cta + " Name= " + nombre);
+     alert("Mujer="  + document.getElementById('fem').checked 
+         + "Hombre=" + document.getElementById('masc').checked );
+     alert("eMail="    + document.getElementById('eMail').checked 
+	     + "telMovil=" + document.getElementById('telMovil').checked
+		 + "telFijo="  + document.getElementById('telFijo').checked ) ;
+	 resid_inx = document.getElementById('residencia').selectedIndex;
+     alert("Resid="  + document.getElementById('residencia').options[resid_inx].value);
+	 alert("Coment=" + document.getElementById('comentarios').value );
+	}	 
+</script>
+
+</head>
+<body>
+<h1>Formularios</h1>
+<form name=formAlum method=post id=formAlum>
+<label> Numero de Cuenta </label> <input type =text name=numCuenta id=numCuenta>
+Nombre del Alumno <input type="text" name=nombreAlum id=nombreAlum> <br><br>
+Genero: <input type="radio" name ="genero" value="masc" id=masc >Masc
+        <input type="radio" name ="genero" value="fem" id=fem >Fem   <br><br>
+Formas de Contacto: 
+		<input type="checkbox" name="telFijo" value="telFijo" id=telFijo>TelFijo 
+		<input type="checkbox" name="telMovil" value="telMovil" id=telMovil>TelMovil 
+		<input type="checkbox" name="eMail" value="eMail" id=eMail> eMail <br><br>
+Con quien vive:
+<select name="residencia" id=residencia >
+<option > con padres</option>
+<option> con parientes</option>
+<option> solo </option>
+<option> con amigos </option>
+</select> <br> <br>
+
+<textarea rows=4 col=50 id="comentarios"> Comentarios</textarea><br><br>
+
+<input type=button value=validar onclick = "validar (); ">
+<input type=reset value=limpiar>
+<input type=submit name=enviar value=enviar>
+
+</form>
+</body>
+</html>

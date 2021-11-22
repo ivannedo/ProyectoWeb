@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--   *********************************** Formulario con cálculos *************************** --> 
+
+<html>
+<head>
+
+<script type=text/javascript src = showObjProperties.js> </script>
+<script>
+function precio1()
+  { document.f1.precio.value=50;  document.f1.producto.value="Art1" }
+function precio2()
+  { document.f1.precio.value=80; document.f1.producto.value="Art2"}
+function pagar ()
+{ // alert("pagando...");
+  var SubTotal, IVA, Total
+  SubTotal = document.f1.precio.value * document.f1.cantidad.value
+  IVA = SubTotal * 0.15
+  Total = SubTotal + IVA
+  document.f1.SubTotal.value = SubTotal 
+  document.f1.IVA.value = IVA 
+  document.f1.Total.value = Total 
+}
+var usuario 
+function alEntrar() 
+  { document.bgcolor = "yellow"; usuario = prompt("Tu nombre? ",""); }
+function alSalir() 
+  { alert(usuario + " ¡Regresa pronto! "); }
+</script>
+
+</head>
+
+<body onLoad="alEntrar();" onUnload="alSalir();">
+<form name=f1>
+Articulo: <input type="radio" name ="arts" value="art2" id=art2 onClick="precio2() ">Art2
+          <input type="radio" name ="arts" value="art1" id=art1 onClick="precio1()" >Art1
+   <br><br>
+Producto <input type=text name=producto readonly> <br>
+Precio   <input type=text name=precio readonly> <br>
+Cantidad <input type=text name=cantidad><br><br>
+SubTotal <input type=text name=SubTotal readonly><br>
+IVA      <input type=text name=IVA readonly><br>
+Total    <input type=text name=Total readonly><br><br> 
+<input type= reset value="Borrar">
+<input type=Button value="Pagar" onClick="pagar (); ">
+</form>
+<hr style="height:2px;  text-align:left; color:blue" >  
+
+<!-- ********************************  -->
+<script>
+function sumar()
+  { v1 = parseInt(document.f2.d1.value)
+    v2 = parseInt(document.f2.d2.value)
+    document.f2.result.value = v1 + v2
+  }
+</script>
+
+<form name=f2>
+d1 <input type=text name=d1> <br>
+d2 <input type=text name=d2> <br>
+rslt <input type=text name=result readonly> <br>
+<input type=button value=Sumar onClick="sumar(); ">
+<input type=reset>
+<input type=button value=Properties onClick="showObjProperties(document)">
+</form>
+Visitar <a href="http://w3schools.com" target="_blank" > <img src="w3schools.png"</a> <br>
+<a href="PagWeb04.html">Web 04, Manejo de Eventos </a>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+﻿<!DOCTYPE HTML>
+
+<! ****************  Eventos onMouseOver, onMouseOut con 2 opciones (falla en Firefox, OK en Chrome y Edge). 
+         Evento onClick. Object Properties  JavaScript externo     **************************   -->
+
+<html>
+<head>
+<script type=text/javascript src="showObjProperties.js" > </script>
+<script>
+function reduceImg()
+  { document.simba.height=100;
+    document.simba.width=150;  
+  }
+function restauraImg()
+  { document.simba.height=462;
+    document.simba.width=793;  
+  }
+function cambiaImg(nombreImg)
+  { document.simba.src = nombreImg; 
+  }
+ 
+</script>
+</head>
+<body>
+<h1>Imagen RollOver y Object Properties</h1>
+<img name=simba  src=simba_zazu.jpg onmouseout="restauraImg();" onmouseover="reduceImg();"  > 
+<!-- <img name=simba  src=simba_zazu.jpg onmouseover="cambiaImg('desert.jpg');" onmouseout= "cambiaImg('simba_zazu.jpg'); " -->
+<br>
+<br>
+<form>
+<input type=button value=Ver_Object_Properties onClick = "showObjProperties(document)" > <br>
+</form>
+</body> 
+</html>
