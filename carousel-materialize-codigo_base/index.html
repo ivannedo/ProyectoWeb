@@ -1,0 +1,189 @@
+<html lang="es">
+<head>
+
+<style>
+#encabezado 
+    { /*background-color: cyan; */
+      /*border: 3px solid black;*/
+      height: 12vh; 
+	    width: 97vw;
+      display: grid;                     /* establecer rejilla en el contenedor */
+      grid-template-columns:20% 30% 30% 20%; /* Cantidad y ancho de columnas (porcentaje del width del container */
+      grid-template-rows:100%;    /* Cantidad y alto de filas (porcentaje del height del container */
+    }
+
+#Logo
+    { background-color: silver; 
+      border: 3px solid silver; 
+	grid-row: 1;
+      grid-column:  1 / 2;  /* start / end o tambien 1 / span 3 */ 
+      width: 100% ; height: 100% ;  
+    }
+
+#Frase
+    { background-color: silver; 
+      border: 3px solid silver; 
+	    grid-row: 1;
+      grid-column:  2 / 3;  /* start / end o tambien 1 / span 3 */ 
+      width: 100% ; height: 100% ;  
+    }
+	
+#Contacto
+    { background-color: silver; 
+      border: 3px solid silver; 
+	    grid-row: 1;
+      grid-column:  3 / 4;  /* start / end o tambien 1 / span 3 */ 
+      width: 100% ; height: 100% ;  
+    }
+
+#IconoCompra
+    { background-color: silver; 
+      border: 3px solid silver; 
+	    grid-row: 1;
+      grid-column:  4 / 5;  /* start / end o tambien 1 / span 3 */ 
+      width: 100% ; height: 100% ;  
+    }
+    
+</style>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Caompatible" content="ie=edge">
+    <title>Materilize | Carrousel y Media</title>
+   
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Raleway:500,600&display=swap" rel="stylesheet">
+    
+    <!--Materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    
+    <!-- CSS Estilos -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <div id=Encabezado>
+        <div id=Logo> <center> <img src= logodeportes.jpg height=80 width=263> </center></div>
+        <div id=Frase>  Frase 
+          <center> <H6>Un campeón es alguien que se levanta cuando no puede más. </H6></center>
+        </div>
+      
+        <div id=Contacto>  Contacto <br>
+           <center> 
+            01 800 activatasports <br>
+            activatasports@deportes.com
+          </center>
+        </div>
+        <div id=IconoCompra> Compra </div>
+      
+      </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <h1 class="center-align titulo">DEPORTES</h1>
+
+                <div class="carousel center-align">
+                    <div class="carousel-item">
+                        <h2 class="subtitulo"> Deportes </h2>
+                        <div class="linea-division"></div>
+                        <p class="sabor"> Futbol </p>
+                        <img src="img/dona-01.jpg" alt="">
+                        <br><br>
+                        <br><br>
+                        <br><br>
+                        <a class="sabor" href=index.html#imgSimba> sjndasn</a>
+                        <!--<p class="sabor"> Link </p>-->
+                    </div>
+
+                    <div class="carousel-item">
+                        <h2 class="subtitulo"> Deportes </h2>
+                        <div class="linea-division"></div>
+                        <p class="sabor"> Atletismo </p>
+                        <img src="img/pastel-01.jpg" alt="">
+                    </div>
+
+                    <div class="carousel-item">
+                        <h2 class="subtitulo"> Deportes </h2>
+                        <div class="linea-division"></div>
+                        <p class="sabor"> Tenis </p>
+                        <img src="img/pastel-01.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col s12">
+                <h1 class="center-align titulo">HOMBRES</h1>
+
+                <div class="carousel center-align">
+                    <div class="carousel-item">
+                        <h2 class="subtitulo"> Deportes </h2>
+                        <div class="linea-division"></div>
+                        <p class="sabor"> Futbol </p>
+                        <img src="img/dona-01.jpg" alt="">
+                    </div>
+
+                    <div class="carousel-item">
+                        <h2 class="subtitulo"> Deportes </h2>
+                        <div class="linea-division"></div>
+                        <p class="sabor"> Atletismo </p>
+                        <img src="img/pastel-01.jpg" alt="">
+                    </div>
+
+                    <div class="carousel-item">
+                        <h2 class="subtitulo"> Deportes </h2>
+                        <div class="linea-division"></div>
+                        <p class="sabor"> Tenis </p>
+                        <img src="img/pastel-01.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col s12">
+                <h1 class="center-align titulo">MUJERES</h1>
+
+                <div class="carousel center-align">
+                    <div class="carousel-item">
+                        <h2 class="subtitulo"> Deportes </h2>
+                        <div class="linea-division"></div>
+                        <p class="sabor"> Futbol </p>
+                        <img src="img/dona-01.jpg" alt="">
+                    </div>
+
+                    <div class="carousel-item">
+                        <h2 class="subtitulo"> Deportes </h2>
+                        <div class="linea-division"></div>
+                        <p class="sabor"> Atletismo </p>
+                        <img src="img/pastel-01.jpg" alt="">
+                    </div>
+
+                    <div class="carousel-item">
+                        <h2 class="subtitulo"> Deportes </h2>
+                        <div class="linea-division"></div>
+                        <p class="sabor"> Tenis </p>
+                        <img src="img/pastel-01.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a name=imgSimba> </a>
+    </div>
+
+
+    <!--Materialize.css-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+   
+    <!-- JS Main -->
+    <script src="js/main.js"></script>
+</body>
+</html>
